@@ -44,6 +44,7 @@ var ApplicationView = Backbone.View.extend({
     // Enable chained calls
     return this;
   }
+
 });
 
 export default ApplicationView;

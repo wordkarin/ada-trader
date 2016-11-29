@@ -13,6 +13,23 @@ var QuoteView = Backbone.View.extend({
 
     // Enable chained calls
     return this;
+  },
+
+  events: {
+    'click .btn-sell': 'sellQuote',
+    'click .btn-buy': 'buyQuote'
+  },
+
+  sellQuote: function(event) {
+    console.log('you sold!');
+    this.quote.price -= 1;
+    this.render();
+  },
+
+  buyQuote: function(event) {
+    console.log('you bought!');
+    this.quote.price += 1;
+    this.render();
   }
 });
 
